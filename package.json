@@ -1,0 +1,25 @@
+{
+  "name": "unusual-spending-kata",
+  "private": true,
+  "version": "0.0.1",
+  "description": "A practice exercise to build an API that notifies cardholders of unusually high spending",
+  "main": "index.js",
+  "scripts": {
+    "test": "teenytest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/testdouble/unusual-spending-kata.git"
+  },
+  "author": "Justin Searls <justin@testdouble.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/testdouble/unusual-spending-kata/issues"
+  },
+  "homepage": "https://github.com/testdouble/unusual-spending-kata#readme",
+  "devDependencies": {
+    "teenytest": "^1.0.0",
+    "testdouble": "^0.7.3"
+  },
+  "dependencies": {}
+}
