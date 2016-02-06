@@ -85,14 +85,13 @@ for us, with an API like this:
 ``` javascript
 var paymentApi = require('payment-api')
 
-paymentApi(userId, year, month, function(payments){
-  /* `payments` will be an array of objects shaped like:
-   *  [{
-   *    category: 'some category name',
-   *    amount: 13.37
-   *  }]
-   */
-})
+var payments = paymentApi(userId, year, month)
+/* `payments` will be an array of objects shaped like:
+ *  [{
+ *    category: 'some category name',
+ *    amount: 13.37
+ *  }]
+ */
 ```
 
 Since the API isn't implemented yet, invoking the actual `payment-api` module
@@ -115,4 +114,14 @@ As I mentioned, invoking the email module itself will trigger an error, so in
 this exercise we'll wrap our use of the method and replace the wrapper with a
 test double in our tests.
 
+## Hard Mode
 
+For added difficulty, try augmenting the rules thusly:
+
+* Try determining high spending with a rolling 3 months of past payments instead
+of only looking at the prior month
+* Instead of returning a list of payments synchronously (which would be quite
+hard for any API to do in Node.js), change the contract of `payment-api`'s
+exported function to accept a final callback function parameter. That callback
+will be invoked with a method signature of `(error, payments)`. To stub an async
+interaction you'll need to use `td.when().thenDo()`
