@@ -1,5 +1,9 @@
 # Unusual Spending Kata
 
+**For getting started with this kata, we recommend watching [this screencast
+which walks through 
+it](http://blog.testdouble.com/posts/2016-06-05-happier-tdd-with-testdouble-js.html).**
+
 This is a repository designed to practice the [Unusual Spending Kata
 ](https://github.com/testdouble/contributing-tests/wiki/Unusual-Spending-Kata)
 in Node.js with [testdouble.js](https://github.com/testdouble/testdouble.js) and
